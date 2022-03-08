@@ -10,11 +10,11 @@ function pop() {
 
 function sed_inplace()
 {
-	if [ `uname` == "Darwin" ]; then
-		sed -i '' "$@"
-	else
+	# if [ `uname` == "Darwin" ]; then
+	# 	sed -i '' "$@"
+	# else
 		sed -i "$@"
-	fi
+	# fi
 }
 
 function clean_gogo_proto()

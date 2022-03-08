@@ -150,6 +150,7 @@ message ChangeDataRequest {
         // min_commit_ts so that the resolved_ts can be advanced.
         NotifyTxnStatus notify_txn_status = 10;
     }
+    kvrpcpb.Context context = 11;
 }
 
 service ChangeData {
