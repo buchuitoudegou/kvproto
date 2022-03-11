@@ -61,6 +61,7 @@ message PrewriteResponse {}
 
 message IngestSSTRequest {
     import_sstpb.SSTMeta sst = 1;
+    kvrpcpb.Context context = 2;
 }
 
 message IngestSSTResponse {}
