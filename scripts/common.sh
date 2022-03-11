@@ -10,11 +10,12 @@ function pop() {
 
 function sed_inplace()
 {
-	# if [ `uname` == "Darwin" ]; then
-	# 	sed -i '' "$@"
-	# else
+	# bsd sed does not support --version.
+	if `sed --version > /dev/null 2>&1`; then
 		sed -i "$@"
-	# fi
+	else
+		sed -i '' "$@"
+	fi
 }
 
 function clean_gogo_proto()
