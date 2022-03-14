@@ -182,6 +182,7 @@ message BackupRequest {
     int32 compression_level = 13;
     // The cipher_info is Used to encrypt sst
     CipherInfo cipher_info = 14;
+    kvrpcpb.Context context = 15;
 }
 
 message StorageBackend {
